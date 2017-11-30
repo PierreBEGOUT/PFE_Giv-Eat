@@ -27,30 +27,33 @@
         android:layout_width="match_parent"
         android:layout_height="28dp"
         android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/lato"
         android:text="Nom de page"
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/head"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.03" />
+        app:layout_constraintTop_toTopOf="@+id/head" />
 
     <ImageButton
         android:id="@+id/search"
         android:layout_width="42dp"
         android:layout_height="33dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:background="@color/vert"
+        app:layout_constraintBottom_toBottomOf="@+id/head"
         app:layout_constraintEnd_toEndOf="@+id/nompage"
         app:layout_constraintHorizontal_bias="0.975"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/nompage"
+        app:layout_constraintTop_toTopOf="@+id/head"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
 
 </android.support.constraint.ConstraintLayout>
