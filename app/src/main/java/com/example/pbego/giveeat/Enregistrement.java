@@ -21,7 +21,8 @@ public class Enregistrement extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
-
+        Intent accueil = new Intent(Enregistrement.this, Accueil.class);
+        startActivity(accueil);
     }
 }
 

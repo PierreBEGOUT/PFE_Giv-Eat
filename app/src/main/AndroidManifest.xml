@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Enregistrement" />
+        <activity android:name=".Accueil"></activity>
     </application>
 
 </manifest>
