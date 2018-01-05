@@ -28,4 +28,26 @@ public class Utilisateur {
         this.email=null;
         this.mdp=null;
     }
+
+    public Utilisateur(String id, String nom, String prenom, String email, String mdp){
+        this.id = Long.parseLong(id);
+        this.nom=nom;
+        this.prenom=prenom;
+        this.email=email;
+        this.mdp=mdp;
+    }
+
+    public Utilisateur(long id, String nom, String prenom, String email, String mdp) {
+        this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.email = email;
+        this.mdp = mdp;
+    }
+
+    public long getId(){return id;}
+    public String getNom(){return nom;}
+    public String getPrenom(){return prenom;}
+    public String getEmail(){return email;}
+    public String getMdp(){return mdp;}
 }
