@@ -1,0 +1,31 @@
+package com.example.pbego.giveeat;
+import android.content.Context;
+/**
+ * Created by pbego on 05/01/2018.
+ */
+
+public class Utilisateur {
+
+    //Labels table name
+    public static final String TABLE = "Utilisateur";
+
+    public static final String KEY_ID = "id";
+    public static final String KEY_NOM = "nom";
+    public static final String KEY_PRENOM = "prenom";
+    public static final String KEY_EMAIL = "email";
+    public static final String KEY_MDP = "mdp";
+
+    public long id;
+    public String nom;
+    public String prenom;
+    public String email;
+    public String mdp;
+
+    public Utilisateur(){
+        this.id = 0;
+        this.nom=null;
+        this.prenom=null;
+        this.email=null;
+        this.mdp=null;
+    }
+}
