@@ -9,6 +9,7 @@ public class Utilisateur {
     //Labels table name
     public static final String TABLE = "Utilisateur";
 
+    //Labels columns names
     public static final String KEY_ID = "id";
     public static final String KEY_NOM = "nom";
     public static final String KEY_PRENOM = "prenom";
@@ -21,13 +22,6 @@ public class Utilisateur {
     public String email;
     public String mdp;
 
-    public Utilisateur(){
-        this.id = 0;
-        this.nom=null;
-        this.prenom=null;
-        this.email=null;
-        this.mdp=null;
-    }
 
     public Utilisateur(String id, String nom, String prenom, String email, String mdp){
         this.id = Long.parseLong(id);
