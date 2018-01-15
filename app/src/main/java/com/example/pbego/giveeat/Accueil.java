@@ -10,7 +10,7 @@ import android.view.View.OnClickListener;
 public class Accueil extends AppCompatActivity implements OnClickListener {
 
 
-    ImageButton profil;
+    private ImageButton profil= null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +18,9 @@ public class Accueil extends AppCompatActivity implements OnClickListener {
 
         final TextView NomPage = (TextView) findViewById(R.id.nompage);
         NomPage.setText("Annonces");
+
+        profil = findViewById(R.id.profil);
+        profil.setOnClickListener(this);
     }
 
     @Override

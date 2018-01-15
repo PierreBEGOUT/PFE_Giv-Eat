@@ -8,8 +8,8 @@
 
     <LinearLayout
         android:id="@+id/footer"
-        android:layout_width="0dp"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_width="410dp"
+        android:layout_height="66dp"
         android:background="@color/gris"
         android:backgroundTint="@color/gris"
         android:orientation="vertical"
@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="@+id/footer"
@@ -55,11 +56,17 @@
         android:id="@+id/profil_color"
         android:layout_width="30dp"
         android:layout_height="29dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@android:drawable/radiobutton_off_background"
         android:backgroundTint="@color/vert"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="261dp"
-        tools:layout_editor_absoluteY="522dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/profil"
+        app:layout_constraintEnd_toEndOf="@+id/profil"
+        app:layout_constraintStart_toStartOf="@+id/profil"
+        app:layout_constraintTop_toTopOf="@+id/profil" />
 
     <ImageButton
         android:id="@+id/profil"
@@ -67,6 +74,7 @@
         android:layout_height="52dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="@+id/footer"
@@ -81,6 +89,7 @@
         android:layout_height="52dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="@+id/footer"
@@ -95,18 +104,21 @@
         android:layout_height="75dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="476dp"
         android:background="@drawable/add"
         android:contentDescription=" "
+        app:layout_constraintBottom_toBottomOf="@+id/footer"
         app:layout_constraintEnd_toStartOf="@+id/profil"
-        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintHorizontal_bias="0.352"
         app:layout_constraintStart_toEndOf="@+id/map"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/plus"
         android:layout_width="21dp"
         android:layout_height="54dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="512dp"
@@ -114,8 +126,10 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/gris"
         android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/add"
         app:layout_constraintEnd_toEndOf="@+id/add"
         app:layout_constraintStart_toStartOf="@+id/add"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </android.support.constraint.ConstraintLayout>
