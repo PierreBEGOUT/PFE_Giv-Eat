@@ -37,6 +37,8 @@ public class DBHandler extends SQLiteOpenHelper {
                 Annonce_Categorie.KEY_ID_CATEGORIE + "INTEGER" + ")";
         db.execSQL(CREATE_TABLE_ANNONCE_CATEGORIE);
 
+        //Manque 4 tables, ça se fait vite
+
         //String CREATE_TABLE_CATEGORIE = "CREATE TABLE "+ Categorie.TABLE
     }
 
