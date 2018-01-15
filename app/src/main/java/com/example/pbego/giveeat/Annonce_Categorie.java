@@ -15,10 +15,17 @@ public class Annonce_Categorie {
     public long id_annonce;
     public long id_categorie;
 
-    public Annonce_Categorie(long id_a, long id_c){
-        this.id_annonce=id_a;
-        this.id_categorie=id_c;
+    public Annonce_Categorie(long id_a, long id_c) {
+        this.id_annonce = id_a;
+        this.id_categorie = id_c;
     }
 
-    public long getId_annonce(){return id_annonce;}
-    public long getId_categorie(){return id_categorie;}
+    public long getId_annonce() {
+        return id_annonce;
+    }
+
+    public long getId_categorie() {
+        return id_categorie;
+    }
+
+}
