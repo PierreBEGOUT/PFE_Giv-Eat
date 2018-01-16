@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grisFond">
+
+    <LinearLayout
+        android:id="@+id/footer2"
+        android:layout_width="0dp"
+        android:layout_height="66dp"
+        android:background="@color/gris"
+        android:backgroundTint="@color/gris"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/list2"
+        android:layout_width="53dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/footer2"
+        app:layout_constraintEnd_toStartOf="@+id/profil_color2"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="@+id/footer2"
+        app:layout_constraintTop_toTopOf="@+id/footer2"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/menu" />
+
+    <ImageButton
+        android:id="@+id/map2"
+        android:layout_width="56dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/footer2"
+        app:layout_constraintEnd_toStartOf="@+id/add2"
+        app:layout_constraintStart_toEndOf="@+id/list"
+        app:layout_constraintTop_toTopOf="@+id/footer2"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/planet" />
+
+    <ImageView
+        android:id="@+id/profil_color2"
+        android:layout_width="30dp"
+        android:layout_height="29dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/radiobutton_off_background"
+        android:backgroundTint="@color/vert"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/map2"
+        app:layout_constraintEnd_toEndOf="@+id/map2"
+        app:layout_constraintStart_toStartOf="@+id/map2"
+        app:layout_constraintTop_toTopOf="@+id/map2" />
+
+    <ImageButton
+        android:id="@+id/profil2"
+        android:layout_width="56dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/footer2"
+        app:layout_constraintEnd_toStartOf="@+id/message2"
+        app:layout_constraintTop_toTopOf="@+id/footer2"
+        app:layout_constraintVertical_bias="0.666"
+        app:srcCompat="@drawable/ic_action_name" />
+
+    <ImageButton
+        android:id="@+id/message2"
+        android:layout_width="56dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/footer2"
+        app:layout_constraintEnd_toEndOf="@+id/footer2"
+        app:layout_constraintTop_toTopOf="@+id/footer2"
+        app:layout_constraintVertical_bias="0.666"
+        app:srcCompat="@drawable/discuss" />
+
+    <ImageButton
+        android:id="@+id/add2"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="480dp"
+        android:background="@drawable/add"
+        android:contentDescription=" "
+        app:layout_constraintBottom_toBottomOf="@+id/footer2"
+        app:layout_constraintEnd_toStartOf="@+id/profil2"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toEndOf="@+id/map"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/plus2"
+        android:layout_width="21dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="+"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/gris"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/add"
+        app:layout_constraintEnd_toEndOf="@+id/add2"
+        app:layout_constraintStart_toStartOf="@+id/add2"
+        app:layout_constraintTop_toTopOf="@+id/add2"
+        app:layout_constraintVertical_bias="1.0" />
+</android.support.constraint.ConstraintLayout>

@@ -8,7 +8,7 @@
 
     <include
         android:id="@+id/include"
-        layout="@layout/footer"></include>
+        layout="@layout/footer2"></include>
 
     <ImageView
         android:id="@+id/fond_vert"
