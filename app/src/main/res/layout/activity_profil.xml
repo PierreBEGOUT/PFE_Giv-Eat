@@ -8,7 +8,7 @@
 
     <include
         android:id="@+id/include"
-        layout="@layout/footer"></include>
+        layout="@layout/footer2"></include>
 
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="382dp"

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.pbego.giveeat.Accueil">
 
-    <include layout="@layout/footer"></include>
+    <include layout="@layout/footer2"></include>
     <include layout="@layout/header"></include>
 
 </android.support.constraint.ConstraintLayout>
