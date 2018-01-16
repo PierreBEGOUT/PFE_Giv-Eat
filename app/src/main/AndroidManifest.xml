@@ -18,10 +18,7 @@
         </activity>
         <activity android:name=".Enregistrement" />
         <activity android:name=".Accueil" />
-        <activity
-            android:name=".Profil"
-            android:label="@string/title_activity_profil"
-            android:theme="@style/AppTheme"></activity>
+        <activity android:name=".Profil"></activity>
     </application>
 
 </manifest>
