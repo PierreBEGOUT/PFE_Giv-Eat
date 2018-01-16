@@ -19,7 +19,7 @@ public class Accueil extends AppCompatActivity implements OnClickListener {
         final TextView NomPage = (TextView) findViewById(R.id.nompage);
         NomPage.setText("Annonces");
 
-        profil = findViewById(R.id.profil);
+        profil = findViewById(R.id.profil_photo);
         profil.setOnClickListener(this);
     }
 
@@ -28,7 +28,7 @@ public class Accueil extends AppCompatActivity implements OnClickListener {
         switch(v.getId())
         {
             //si on appuit sur le profil
-            case R.id.profil:
+            case R.id.profil_photo:
                 Intent prof = new Intent(Accueil.this, Profil.class);
                 startActivity(prof);
                 break;
