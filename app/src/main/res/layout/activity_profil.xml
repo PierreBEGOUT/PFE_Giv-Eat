@@ -12,8 +12,8 @@
 
     <ImageView
         android:id="@+id/fond_vert"
-        android:layout_width="383dp"
-        android:layout_height="149dp"
+        android:layout_width="0dp"
+        android:layout_height="166dp"
         android:background="@color/vert"
         app:layout_constraintBottom_toBottomOf="@+id/include"
         app:layout_constraintEnd_toEndOf="parent"
