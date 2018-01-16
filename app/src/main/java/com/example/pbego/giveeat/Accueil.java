@@ -1,5 +1,6 @@
 package com.example.pbego.giveeat;
 import android.content.Intent;
+import android.support.v7.widget.RecyclerView;
 import android.widget.ImageButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,6 +12,8 @@ public class Accueil extends AppCompatActivity implements OnClickListener {
 
 
     private ImageButton profil= null;
+    private DBHandler dbHandler;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,12 +21,17 @@ public class Accueil extends AppCompatActivity implements OnClickListener {
 
         final TextView NomPage = (TextView) findViewById(R.id.nompage);
         NomPage.setText("Annonces");
-        
 
         profil = findViewById(R.id.profil2);
-
         profil.setOnClickListener(this);
+
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.ListeAnnonce);
     }
+
+
+
+
+
 
     @Override
     public void onClick(View v) {
@@ -34,8 +42,6 @@ public class Accueil extends AppCompatActivity implements OnClickListener {
                 Intent prof = new Intent(Accueil.this, Profil.class);
                 startActivity(prof);
                 break;
-
-
         }
     }
 

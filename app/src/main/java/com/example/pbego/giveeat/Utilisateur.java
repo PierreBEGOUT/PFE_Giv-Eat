@@ -32,6 +32,14 @@ public class Utilisateur {
     public String rue;
     public Image photo;
 
+    public Utilisateur(long id, String nom, String prenom, String email, String mdp) {
+        this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.email = email;
+        this.mdp = mdp;
+    }
+
     public Utilisateur(long id, String nom, String prenom, String email, String mdp, String ville, long code, String rue, Image phot) {
         this.id = id;
         this.nom = nom;
