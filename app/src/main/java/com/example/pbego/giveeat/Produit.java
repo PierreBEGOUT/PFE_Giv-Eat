@@ -10,7 +10,7 @@ public class Produit {
 
     //Labels columns names
     public static final String KEY_ID_PRODUIT = "id_produit";
-    public static final String KEY_TEXTE_ANNONCE = "id_annonce";
+    public static final String KEY_ID_ANNONCE = "id_annonce";
     public static final String KEY_NOM_PRODUIT = "nom_produit";
     public static final String KEY_QUANTITE = "quantite";
 
