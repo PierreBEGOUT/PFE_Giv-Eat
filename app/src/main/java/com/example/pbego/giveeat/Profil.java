@@ -16,7 +16,7 @@ public class Profil extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profil);
 
-        final ImageView ProfilColor = (ImageView) findViewById(R.id.profil_color);
+        final ImageView ProfilColor = (ImageView) findViewById(R.id.profil_color2);
         ProfilColor.setVisibility(View.VISIBLE);
 
 
