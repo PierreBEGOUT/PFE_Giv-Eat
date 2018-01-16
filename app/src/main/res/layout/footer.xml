@@ -19,13 +19,17 @@
                 android:id="@+id/footer"
                 android:layout_width="410dp"
                 android:layout_height="66dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
                 android:background="@color/gris"
                 android:backgroundTint="@color/gris"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent">
+                app:layout_constraintHorizontal_bias="0.884"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0">
 
             </LinearLayout>
 
@@ -112,14 +116,13 @@
                 android:layout_height="75dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="480dp"
                 android:background="@drawable/add"
                 android:contentDescription=" "
                 app:layout_constraintBottom_toBottomOf="@+id/footer"
                 app:layout_constraintEnd_toStartOf="@+id/profil"
                 app:layout_constraintHorizontal_bias="0.421"
                 app:layout_constraintStart_toEndOf="@+id/map"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/footer"
                 app:layout_constraintVertical_bias="1.0" />
 
             <TextView
@@ -138,7 +141,7 @@
                 app:layout_constraintEnd_toEndOf="@+id/add"
                 app:layout_constraintStart_toStartOf="@+id/add"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_bias="0.0" />
 
         </android.support.constraint.ConstraintLayout>
     </android.support.v4.widget.NestedScrollView>
