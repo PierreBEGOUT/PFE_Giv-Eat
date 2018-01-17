@@ -12,21 +12,4 @@
         android:id="@+id/include2"
         layout="@layout/header"></include>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/ListeAnnonce"
-        android:layout_width="160dp"
-        android:layout_height="38dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:clipChildren="false"
-        android:clipToPadding="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.038"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/include2"
-        app:layout_constraintVertical_bias="0.103" />
-
 </android.support.constraint.ConstraintLayout>

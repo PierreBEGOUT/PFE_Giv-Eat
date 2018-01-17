@@ -22,8 +22,7 @@ public class Annonce {
     public String localisation;
     public String statut;
 
-    public Annonce(long id, long id_ut, String texte, String local){
-        this.id_annonce= id;
+    public Annonce( long id_ut, String texte, String local){
         this.id_utilisateur =id_ut;
         this.text_annonce=texte;
         this.localisation=local;

@@ -21,8 +21,7 @@ public class Message {
     public String date_heure;
     public String message;
 
-    public Message(long id_me, long id_conv, long id_ut, String date, String mess) {
-        this.id_message=id_me;
+    public Message( long id_conv, long id_ut, String date, String mess) {
         this.id_conversation=id_conv;
         this.id_utilisateur = id_ut;
         this.date_heure=date;

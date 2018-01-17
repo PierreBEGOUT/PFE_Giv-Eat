@@ -19,8 +19,7 @@ public class Produit {
     public String nom_produit;
     public long quantite;
 
-    public Produit(long id_prod, long id_annonce, String nom, long nb){
-        this.id_produit=id_prod;
+    public Produit(long id_annonce, String nom, long nb){
         this.id_annonce=id_annonce;
         this.nom_produit=nom;
         this.quantite=nb;

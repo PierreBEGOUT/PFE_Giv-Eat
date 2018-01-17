@@ -34,7 +34,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         {
             //si on appuit sur le 1er
             case R.id.connexion:
-                //action pour le premier bouton
+                Intent connexion = new Intent(MainActivity.this, Connexion.class);
+                startActivity(connexion);
                 break;
             //si on appuit sur le 2e
             case R.id.creationCompte:

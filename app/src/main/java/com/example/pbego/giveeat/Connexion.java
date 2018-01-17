@@ -10,43 +10,47 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.widget.TextView;
 
-public class Enregistrement extends AppCompatActivity implements View.OnClickListener {
+public class Connexion extends AppCompatActivity implements View.OnClickListener {
 
     private Button b = null;
     EditText text = null;
-    String nom, prenom, mdp1, email= "";
-
-    DBHandler dbHandler = new DBHandler(this);
+    String mdp, email= "";
+    boolean isTrue =false;
+    TextView test =null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_enregistrement);
-        b = findViewById(R.id.suivant);
+        setContentView(R.layout.activity_connexion);
+        b = findViewById(R.id.connexion);
         b.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
 
-        text = findViewById(R.id.nom);
-        nom = text.getText().toString();
-        text = findViewById(R.id.prenom);
-        prenom = text.getText().toString();
         text = findViewById(R.id.email);
         email = text.getText().toString();
-        text = findViewById(R.id.mdp1);
-        mdp1 = text.getText().toString();
+        text = findViewById(R.id.mdp);
+        mdp = text.getText().toString();
 
-        Utilisateur newUser = new Utilisateur(nom, prenom, email, mdp1 );
         Context context = getApplicationContext();
         UtilisateurRepo repo = new UtilisateurRepo(context);
-        long Id = repo.insertSansAdresse(newUser);
-        System.out.println("Gros Connard");
-        System.out.println(Id);
-        Intent accueil = new Intent(Enregistrement.this, Accueil.class);
-        startActivity(accueil);
+
+        Utilisateur user = new Utilisateur();
+        user = repo.getUserByMail(email,mdp);
+
+
+        if(isTrue =true){
+            Intent accueil = new Intent(Connexion.this, Accueil.class);
+            startActivity(accueil);
+        }
+        else{
+            test = findViewById(R.id.incorrect);
+            test.setVisibility(View.VISIBLE);
+        }
+
     }
 }
-

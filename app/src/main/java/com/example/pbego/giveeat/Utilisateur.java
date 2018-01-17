@@ -32,16 +32,23 @@ public class Utilisateur {
     public String rue;
     public Image photo;
 
-    public Utilisateur(long id, String nom, String prenom, String email, String mdp) {
-        this.id = id;
+    public Utilisateur()
+    {
+        this.id = 0;
+        this.nom=null;
+        this.prenom=null;
+        this.email=null;
+        this.mdp=null;
+    }
+
+    public Utilisateur(String nom, String prenom, String email, String mdp) {
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
         this.mdp = mdp;
     }
 
-    public Utilisateur(long id, String nom, String prenom, String email, String mdp, String ville, long code, String rue, Image phot) {
-        this.id = id;
+    public Utilisateur(String nom, String prenom, String email, String mdp, String ville, long code, String rue, Image phot) {
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;

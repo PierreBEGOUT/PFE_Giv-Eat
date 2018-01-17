@@ -1,4 +1,5 @@
 package com.example.pbego.giveeat;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.widget.ImageButton;
@@ -12,7 +13,6 @@ public class Accueil extends AppCompatActivity implements OnClickListener {
 
 
     private ImageButton profil= null;
-    private DBHandler dbHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +25,8 @@ public class Accueil extends AppCompatActivity implements OnClickListener {
         profil = findViewById(R.id.profil2);
         profil.setOnClickListener(this);
 
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.ListeAnnonce);
     }
+
 
 
 

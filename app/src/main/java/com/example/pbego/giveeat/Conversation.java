@@ -19,8 +19,7 @@ public class Conversation {
     public long id_utilisateur2;
     public String date_debut;
 
-    public Conversation(long id, long id_ut1, long id_ut2, String date) {
-        this.id_conversation=id;
+    public Conversation(long id_ut1, long id_ut2, String date) {
         this.id_utilisateur1 = id_ut1;
         this.id_utilisateur2=id_ut2;
         this.date_debut=date;
