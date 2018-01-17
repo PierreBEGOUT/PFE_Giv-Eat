@@ -132,7 +132,6 @@ public class UtilisateurRepo {
                 user.email =cursor.getString(cursor.getColumnIndex(Utilisateur.KEY_EMAIL));
             } while (cursor.moveToNext());
         }
-
         cursor.close();
         db.close();
         System.out.println("Succès");

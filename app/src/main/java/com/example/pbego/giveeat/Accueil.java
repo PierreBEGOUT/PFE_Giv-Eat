@@ -9,10 +9,16 @@ import android.widget.TextView;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+import java.util.HashMap;
+
 public class Accueil extends AppCompatActivity implements OnClickListener {
 
-
+    // Session Manager Class
+    SessionManagement session;
     private ImageButton profil= null;
+    HashMap<String,String> user;
+    TextView test1, test2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +30,19 @@ public class Accueil extends AppCompatActivity implements OnClickListener {
 
         profil = findViewById(R.id.profil2);
         profil.setOnClickListener(this);
+
+        session = new SessionManagement(getApplicationContext());
+
+        session.checkLogin();
+
+        // get user data from session
+        user = session.getUserDetails();
+
+        // name
+        String name = user.get(SessionManagement.KEY_NOM);
+
+        // id
+        String id = user.get(SessionManagement.KEY_ID);
 
     }
 

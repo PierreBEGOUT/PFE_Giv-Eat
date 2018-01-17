@@ -3,19 +3,17 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 
 public class Enregistrement extends AppCompatActivity implements View.OnClickListener {
 
     private Button b = null;
     EditText text = null;
     String nom, prenom, mdp1, email= "";
+
+    SessionManagement session;
 
     DBHandler dbHandler = new DBHandler(this);
 
@@ -25,14 +23,16 @@ public class Enregistrement extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_enregistrement);
         b = findViewById(R.id.suivant);
         b.setOnClickListener(this);
+
+        session = new SessionManagement(getApplicationContext());
     }
 
     @Override
     public void onClick(View v) {
 
-        text = findViewById(R.id.nom);
+        text = findViewById(R.id.nomProf);
         nom = text.getText().toString();
-        text = findViewById(R.id.prenom);
+        text = findViewById(R.id.prenomProf);
         prenom = text.getText().toString();
         text = findViewById(R.id.email);
         email = text.getText().toString();
@@ -43,6 +43,7 @@ public class Enregistrement extends AppCompatActivity implements View.OnClickLis
         Context context = getApplicationContext();
         UtilisateurRepo repo = new UtilisateurRepo(context);
         long Id = repo.insertSansAdresse(newUser);
+        session.createLoginSession(Long.toString(Id), newUser.nom, newUser.prenom);
         System.out.println("Gros Connard");
         System.out.println(Id);
         Intent accueil = new Intent(Enregistrement.this, Accueil.class);

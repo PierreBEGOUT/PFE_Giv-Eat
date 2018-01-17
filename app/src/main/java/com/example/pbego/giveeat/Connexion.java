@@ -20,12 +20,17 @@ public class Connexion extends AppCompatActivity implements View.OnClickListener
     boolean isTrue =false;
     TextView test =null;
 
+    SessionManagement session;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connexion);
         b = findViewById(R.id.connexion);
         b.setOnClickListener(this);
+
+        // Session Manager
+        session = new SessionManagement(getApplicationContext());
     }
 
     @Override
@@ -39,18 +44,19 @@ public class Connexion extends AppCompatActivity implements View.OnClickListener
         Context context = getApplicationContext();
         UtilisateurRepo repo = new UtilisateurRepo(context);
 
-        Utilisateur user = new Utilisateur();
+        Utilisateur user;
         user = repo.getUserByMail(email,mdp);
 
 
-        if(isTrue =true){
-            Intent accueil = new Intent(Connexion.this, Accueil.class);
-            startActivity(accueil);
+
+        if(user.nom != null){
+            session.createLoginSession(Long.toString(user.id), user.nom, user.prenom);
+            Intent connexion = new Intent(Connexion.this, Accueil.class);
+            startActivity(connexion);
         }
         else{
             test = findViewById(R.id.incorrect);
             test.setVisibility(View.VISIBLE);
         }
-
     }
 }

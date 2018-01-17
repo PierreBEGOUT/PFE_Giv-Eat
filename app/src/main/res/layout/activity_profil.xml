@@ -24,7 +24,7 @@
         app:srcCompat="@color/vert" />
 
     <TextView
-        android:id="@+id/nom"
+        android:id="@+id/nomProf"
         android:layout_width="111dp"
         android:layout_height="30dp"
         android:layout_marginBottom="8dp"
@@ -44,7 +44,7 @@
         app:layout_constraintVertical_bias="0.015" />
 
     <TextView
-        android:id="@+id/prenom"
+        android:id="@+id/prenomProf"
         android:layout_width="111dp"
         android:layout_height="30dp"
         android:layout_marginBottom="8dp"
@@ -101,7 +101,7 @@
         app:layout_constraintVertical_bias="0.199" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/ville"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -197,7 +197,7 @@
         android:text="Préférence :"
         android:textColor="@android:color/black"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/toggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/Préférence"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.063"
         app:layout_constraintStart_toStartOf="parent"
@@ -205,7 +205,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <ToggleButton
-        android:id="@+id/toggleButton"
+        android:id="@+id/Préférence"
         android:layout_width="213dp"
         android:layout_height="40dp"
         android:layout_marginBottom="8dp"
