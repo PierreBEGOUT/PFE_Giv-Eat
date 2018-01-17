@@ -86,7 +86,7 @@ public class UtilisateurRepo {
                 Utilisateur.KEY_ID + "," +
                 Utilisateur.KEY_NOM + "," +
                 Utilisateur.KEY_PRENOM + "," +
-                Utilisateur.KEY_EMAIL + "," +
+                Utilisateur.KEY_EMAIL +
                 " FROM " + Utilisateur.TABLE
                 + " WHERE " +
                 Utilisateur.KEY_ID + "=?";// It's a good practice to use parameter ?, instead of concatenate string

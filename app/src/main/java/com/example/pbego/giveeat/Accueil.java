@@ -15,8 +15,8 @@ public class Accueil extends AppCompatActivity implements OnClickListener {
 
     // Session Manager Class
     SessionManagement session;
-    private ImageButton profil= null;
     HashMap<String,String> user;
+    private ImageButton profil= null;
     TextView test1, test2;
 
 
