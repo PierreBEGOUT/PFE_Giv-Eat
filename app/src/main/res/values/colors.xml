@@ -7,4 +7,7 @@
     <color name="vert">#53e289</color>
     <color name="gris">#F4F2F2</color>
     <color name="grisFond">#e6e4e4</color>
+    <color name="vertTransparent">#6453e289</color>
+    <color name="rouge">#5dcc0000</color>
+
 </resources>
