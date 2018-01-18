@@ -43,8 +43,19 @@ public class Profil extends AppCompatActivity {
 
         nomprof=findViewById(R.id.nomProf);
         nomprof.setText(User.nom);
+        nomprof.setTextSize(18);
         prenomprof=findViewById(R.id.prenomProf);
         prenomprof.setText(User.prenom);
+        prenomprof.setTextSize(18);
+
+        if(User.ville == null){
+            TextView adress = findViewById(R.id.adress);
+            adress.setText("Pas d'adresse");
+            adress = findViewById(R.id.code_postal);
+            adress.setText("");
+            adress = findViewById(R.id.ville);
+            adress.setText("");
+        }
 
     }
 

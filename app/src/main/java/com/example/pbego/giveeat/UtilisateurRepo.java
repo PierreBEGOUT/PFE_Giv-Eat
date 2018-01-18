@@ -138,27 +138,4 @@ public class UtilisateurRepo {
         return user;
     }
 
-    public String test(long Id)
-    {
-        SQLiteDatabase db = dbHandler.getReadableDatabase();
-
-        Utilisateur user = new Utilisateur();
-
-        Cursor cursor = db.rawQuery("SELECT id, nom FROM Utilisateur WHERE id = '?'", new String[] {Long.toString(Id)});
-
-        if(cursor.getCount()>0) {
-            if (cursor.moveToFirst()) {
-                do {
-                    user.id = cursor.getInt(cursor.getColumnIndex(Utilisateur.KEY_ID));
-                    user.nom = cursor.getString(cursor.getColumnIndex(Utilisateur.KEY_NOM));
-                } while (cursor.moveToNext());
-            }
-        }
-
-        cursor.close();
-        db.close();
-
-        if(user.id == 0) return "Raté connard";
-        else return "Bien joué mon cochon";
-    }
 }
