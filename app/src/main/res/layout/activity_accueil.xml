@@ -8,10 +8,6 @@
 
     <include layout="@layout/footer2"></include>
 
-    <include
-        android:id="@+id/include2"
-        layout="@layout/header"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"></include>
+    <include layout="@layout/header"></include>
 
 </android.support.constraint.ConstraintLayout>

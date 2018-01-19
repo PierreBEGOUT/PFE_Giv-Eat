@@ -30,7 +30,8 @@
             android:name=".Connexion"
             android:label="@string/title_activity_connexion"
             android:theme="@style/AppTheme" />
-        <activity android:name=".MesAnnonces"></activity>
+        <activity android:name=".MesAnnonces" />
+        <activity android:name=".Annonce_Detail"></activity>
     </application>
 
 </manifest>
