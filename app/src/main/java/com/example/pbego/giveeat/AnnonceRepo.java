@@ -77,11 +77,11 @@ public class AnnonceRepo {
         if (cursor.moveToFirst()) {
             do {
                 HashMap<String, String> annonce = new HashMap<String, String>();
-                annonce.put("id", cursor.getString(cursor.getColumnIndex(Annonce.KEY_ID_ANNONCE)));
-                annonce.put("last_name", cursor.getString(cursor.getColumnIndex(Annonce.KEY_ID_UTILISATEUR)));
-                annonce.put("first_name", cursor.getString(cursor.getColumnIndex(Annonce.KEY_LOCALISATION)));
-                annonce.put("email", cursor.getString(cursor.getColumnIndex(Annonce.KEY_TEXT_ANNONCE)));
-                annonce.put("country", cursor.getString(cursor.getColumnIndex(Annonce.KEY_STATUT)));
+                annonce.put("id_annonce", cursor.getString(cursor.getColumnIndex(Annonce.KEY_ID_ANNONCE)));
+                annonce.put("id_utilisateur", cursor.getString(cursor.getColumnIndex(Annonce.KEY_ID_UTILISATEUR)));
+                annonce.put("localisation", cursor.getString(cursor.getColumnIndex(Annonce.KEY_LOCALISATION)));
+                annonce.put("texte_annonce", cursor.getString(cursor.getColumnIndex(Annonce.KEY_TEXT_ANNONCE)));
+                annonce.put("statut", cursor.getString(cursor.getColumnIndex(Annonce.KEY_STATUT)));
                 annonceList.add(annonce);
 
             } while (cursor.moveToNext());
@@ -89,7 +89,7 @@ public class AnnonceRepo {
 
         cursor.close();
         db.close();
-        System.out.println("UserList : " + annonceList);
+        System.out.println("annonceList : " + annonceList);
         return annonceList;
     }
 
@@ -112,11 +112,11 @@ public class AnnonceRepo {
         if (cursor.moveToFirst()) {
             do {
                 HashMap<String, String> annonce = new HashMap<String, String>();
-                annonce.put("id", cursor.getString(cursor.getColumnIndex(Annonce.KEY_ID_ANNONCE)));
-                annonce.put("last_name", cursor.getString(cursor.getColumnIndex(Annonce.KEY_ID_UTILISATEUR)));
-                annonce.put("first_name", cursor.getString(cursor.getColumnIndex(Annonce.KEY_LOCALISATION)));
-                annonce.put("email", cursor.getString(cursor.getColumnIndex(Annonce.KEY_TEXT_ANNONCE)));
-                annonce.put("country", cursor.getString(cursor.getColumnIndex(Annonce.KEY_STATUT)));
+                annonce.put("id_annonce", cursor.getString(cursor.getColumnIndex(Annonce.KEY_ID_ANNONCE)));
+                annonce.put("id_utilisateur", cursor.getString(cursor.getColumnIndex(Annonce.KEY_ID_UTILISATEUR)));
+                annonce.put("localisation", cursor.getString(cursor.getColumnIndex(Annonce.KEY_LOCALISATION)));
+                annonce.put("texte_annonce", cursor.getString(cursor.getColumnIndex(Annonce.KEY_TEXT_ANNONCE)));
+                annonce.put("statut", cursor.getString(cursor.getColumnIndex(Annonce.KEY_STATUT)));
                 annonceList.add(annonce);
 
             } while (cursor.moveToNext());
@@ -124,7 +124,7 @@ public class AnnonceRepo {
 
         cursor.close();
         db.close();
-        System.out.println("UserList : " + annonceList);
+        System.out.println("annonceList : " + annonceList);
         return annonceList;
     }
 }

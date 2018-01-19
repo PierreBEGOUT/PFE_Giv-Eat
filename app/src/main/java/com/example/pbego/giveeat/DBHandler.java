@@ -13,7 +13,7 @@ import java.util.List;
 public class DBHandler extends SQLiteOpenHelper {
 
     // Database Version
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
     // Database Name
     public static final String DATABASE_NAME = "GivEat.db";
 
@@ -39,7 +39,7 @@ public class DBHandler extends SQLiteOpenHelper {
         db.execSQL(CREATE_TABLE_ANNONCE_CATEGORIE);
 
         String CREATE_TABLE_CATEGORIE = "CREATE TABLE "+ Categorie.TABLE + "(" + Categorie.KEY_ID_CATEGORIE + " INTEGER PRIMARY KEY ," +
-                Categorie.KEY_TEXTE_CATEGORIE + " TEXT, " + Categorie.KEY_COMMENTAIRE + " TEXT" + ")";
+                Categorie.KEY_TEXTE_CATEGORIE + " TEXT " +  ")";
         db.execSQL(CREATE_TABLE_CATEGORIE);
 
         String CREATE_TABLE_PRODUIT = "CREATE TABLE " + Produit.TABLE + "(" + Produit.KEY_ID_PRODUIT + " INTEGER PRIMARY KEY ," +
