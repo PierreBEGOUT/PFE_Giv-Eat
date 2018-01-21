@@ -22,10 +22,9 @@ public class CategorieRepo {
         SQLiteDatabase db = dbHandler.getWritableDatabase();
         ContentValues values = new ContentValues();
 
-        values.put(Categorie.KEY_ID_CATEGORIE, cat.id_categorie);
-        values.put(Categorie.KEY_ID_CATEGORIE, cat.texte_categorie);
+        values.put(Categorie.KEY_TEXTE_CATEGORIE, cat.texte_categorie);
 
-        long cat_Id=db.insert(Annonce_Categorie.TABLE, null, values);
+        long cat_Id=db.insert(Categorie.TABLE, null, values);
         db.close();
         return cat_Id;
     }
@@ -36,4 +35,5 @@ public class CategorieRepo {
         db.delete(Categorie.TABLE, Categorie.KEY_ID_CATEGORIE + "= ?", new String[] { String.valueOf(cat_Id) });
         db.close(); // Closing database connection
     }
+
 }

@@ -15,8 +15,7 @@ public class Categorie {
     public long id_categorie;
     public String texte_categorie;
 
-    public Categorie(long id_cat, String texte, String com){
-        this.id_categorie=id_cat;
+    public Categorie(String texte){
         this.texte_categorie=texte;
     }
 

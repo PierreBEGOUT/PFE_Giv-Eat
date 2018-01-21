@@ -16,8 +16,7 @@ public class Accueil extends AppCompatActivity implements OnClickListener {
     // Session Manager Class
     SessionManagement session;
     HashMap<String,String> user;
-    private ImageButton profil= null;
-    TextView test1, test2;
+    private ImageButton profil, add= null;
 
 
     @Override
@@ -30,6 +29,9 @@ public class Accueil extends AppCompatActivity implements OnClickListener {
 
         profil = findViewById(R.id.profil2);
         profil.setOnClickListener(this);
+
+        add = findViewById(R.id.add2);
+        add.setOnClickListener(this);
 
         session = new SessionManagement(getApplicationContext());
 
@@ -60,6 +62,10 @@ public class Accueil extends AppCompatActivity implements OnClickListener {
             case R.id.profil2:
                 Intent prof = new Intent(Accueil.this, Profil.class);
                 startActivity(prof);
+                break;
+            case R.id.add2:
+                Intent add = new Intent(Accueil.this, Add.class);
+                startActivity(add);
                 break;
         }
     }

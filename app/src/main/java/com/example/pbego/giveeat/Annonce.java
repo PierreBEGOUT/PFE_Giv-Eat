@@ -14,6 +14,7 @@ public class Annonce {
     public static final String KEY_ID_UTILISATEUR = "id_utilisateur";
     public static final String KEY_TEXT_ANNONCE = "text_annonce";
     public static final String KEY_LOCALISATION = "localisation";
+    public static final String KEY_DATE = "date";
     public static final String KEY_STATUT = "satut";
 
     public long id_annonce;
@@ -21,10 +22,12 @@ public class Annonce {
     public String text_annonce;
     public String localisation;
     public String statut;
+    public String date;
 
-    public Annonce( long id_ut, String texte, String local){
+    public Annonce( long id_ut, String texte, String dat ,String local){
         this.id_utilisateur =id_ut;
         this.text_annonce=texte;
+        this.date=dat;
         this.localisation=local;
         this.statut= "Disponible";
     }

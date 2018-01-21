@@ -6,33 +6,12 @@
     android:layout_height="match_parent"
     tools:context="com.example.pbego.giveeat.Add">
 
-    <include
-        android:id="@+id/include3"
-        layout="@layout/footer2"
-        android:layout_height="80dp"
-        android:layout_width="80dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></include>
+    <include layout="@layout/footer2"></include>
 
-    <include
-        android:id="@+id/include2"
-        layout="@layout/header"
-        android:layout_width="390dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"></include>
+    <include layout="@layout/header"></include>
 
     <ScrollView
-        android:layout_width="370dp"
+        android:layout_width="387dp"
         android:layout_height="437dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
@@ -187,13 +166,12 @@
                 android:id="@+id/description_complete"
                 android:layout_width="341dp"
                 android:layout_height="88dp"
-                android:layout_alignLeft="@+id/description"
-                android:layout_alignStart="@+id/description"
+                android:layout_alignLeft="@+id/add_photo"
+                android:layout_alignStart="@+id/add_photo"
                 android:layout_below="@+id/consigne"
-                android:layout_marginTop="18dp"
+                android:layout_marginTop="21dp"
                 android:background="@color/gris"
                 android:fontFamily="@font/lato"
-                android:text="ihibfihe o boberubrubvbu bububvueb  bu e n ioehiovbe oivzeiociozcbzbcozb obvbebvoebo boub ebo boeb ubuoebueb eu beobob oueb oeb ubeobodbkxb bo boe b oeb oe"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintHorizontal_bias="0.518"
@@ -287,8 +265,9 @@
                 android:id="@+id/add_butt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/choix_mess"
-                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@+id/photo_text"
+                android:layout_toRightOf="@+id/photo_text"
                 android:background="@color/vert"
                 android:fontFamily="@font/lato"
                 android:text="Ajouter"
