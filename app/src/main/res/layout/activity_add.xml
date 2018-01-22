@@ -12,16 +12,15 @@
 
     <ScrollView
         android:layout_width="387dp"
-        android:layout_height="425dp"
+        android:layout_height="423dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/include3"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.587">
+        app:layout_constraintVertical_bias="0.414">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -29,8 +28,8 @@
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            tools:layout_editor_absoluteX="242dp">
+            app:layout_constraintVertical_bias="1.0"
+            tools:layout_editor_absoluteX="8dp">
 
             <ToggleButton
                 android:id="@+id/frais"
@@ -267,13 +266,12 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/choix_mess"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="13dp"
                 android:background="@color/vert"
                 android:fontFamily="@font/lato"
                 android:text="Ajouter"
                 android:textStyle="bold"
-                tools:layout_editor_absoluteX="148dp"
-                tools:layout_editor_absoluteY="519dp" />
+                tools:layout_editor_absoluteX="134dp"
+                tools:layout_editor_absoluteY="503dp" />
 
         </RelativeLayout>
     </ScrollView>
