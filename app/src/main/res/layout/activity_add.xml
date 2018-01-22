@@ -12,7 +12,7 @@
 
     <ScrollView
         android:layout_width="387dp"
-        android:layout_height="437dp"
+        android:layout_height="425dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -265,13 +265,15 @@
                 android:id="@+id/add_butt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_toEndOf="@+id/photo_text"
-                android:layout_toRightOf="@+id/photo_text"
+                android:layout_below="@+id/choix_mess"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="13dp"
                 android:background="@color/vert"
                 android:fontFamily="@font/lato"
                 android:text="Ajouter"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="148dp"
+                tools:layout_editor_absoluteY="519dp" />
 
         </RelativeLayout>
     </ScrollView>
