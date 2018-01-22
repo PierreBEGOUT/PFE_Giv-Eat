@@ -12,25 +12,24 @@
 
     <ScrollView
         android:layout_width="387dp"
-        android:layout_height="437dp"
+        android:layout_height="436dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/include3"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.587">
+        app:layout_constraintVertical_bias="0.495">
 
         <RelativeLayout
-            android:layout_width="match_parent"
+            android:layout_width="368dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            tools:layout_editor_absoluteX="242dp">
+            tools:layout_editor_absoluteX="8dp">
 
             <ToggleButton
                 android:id="@+id/frais"
@@ -266,12 +265,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:layout_toEndOf="@+id/photo_text"
-                android:layout_toRightOf="@+id/photo_text"
+                android:layout_toEndOf="@+id/textView10"
+                android:layout_toRightOf="@+id/textView10"
                 android:background="@color/vert"
                 android:fontFamily="@font/lato"
                 android:text="Ajouter"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="200dp"
+                tools:layout_editor_absoluteY="489dp" />
 
         </RelativeLayout>
     </ScrollView>
