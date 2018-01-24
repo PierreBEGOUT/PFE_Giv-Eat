@@ -24,6 +24,15 @@ public class Annonce {
     public String statut;
     public String date;
 
+    public Annonce(long id_an, long id_ut, String texte, String dat ,String local){
+        this.id_annonce=id_an;
+        this.id_utilisateur =id_ut;
+        this.text_annonce=texte;
+        this.date=dat;
+        this.localisation=local;
+        this.statut= "Disponible";
+    }
+
     public Annonce( long id_ut, String texte, String dat ,String local){
         this.id_utilisateur =id_ut;
         this.text_annonce=texte;

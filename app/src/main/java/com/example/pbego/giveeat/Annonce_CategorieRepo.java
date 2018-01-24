@@ -62,7 +62,7 @@ public class Annonce_CategorieRepo {
 
         ArrayList<HashMap<String, String>> catList = new ArrayList<HashMap<String, String>>();
 
-        Cursor cursor = db.rawQuery(selectQuery, null);
+        Cursor cursor = db.rawQuery(selectQuery, new String[]{String.valueOf(annonce_ID)});
         // looping through all rows and adding to list
 
         if (cursor.moveToFirst()) {

@@ -5,6 +5,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+
 /**
  * Created by pbego on 18/01/2018.
  */
@@ -66,6 +68,7 @@ public class AnnonceRepo {
                 Annonce.KEY_ID_UTILISATEUR + "," +
                 Annonce.KEY_LOCALISATION + "," +
                 Annonce.KEY_TEXT_ANNONCE + "," +
+                Annonce.KEY_DATE + "," +
                 Annonce.KEY_STATUT +
                 " FROM " + Annonce.TABLE;
 
@@ -81,9 +84,45 @@ public class AnnonceRepo {
                 annonce.put("id_utilisateur", cursor.getString(cursor.getColumnIndex(Annonce.KEY_ID_UTILISATEUR)));
                 annonce.put("localisation", cursor.getString(cursor.getColumnIndex(Annonce.KEY_LOCALISATION)));
                 annonce.put("texte_annonce", cursor.getString(cursor.getColumnIndex(Annonce.KEY_TEXT_ANNONCE)));
+                annonce.put("date", cursor.getString(cursor.getColumnIndex(Annonce.KEY_DATE)));
                 annonce.put("statut", cursor.getString(cursor.getColumnIndex(Annonce.KEY_STATUT)));
                 annonceList.add(annonce);
 
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+        System.out.println("annonceList : " + annonceList);
+        return annonceList;
+    }
+
+    public ArrayList<LinkedHashMap<String, String>>  getAnnonceListByUtDiff(long user_ID) {
+        //Open connection to read only
+        SQLiteDatabase db = dbHandler.getReadableDatabase();
+        String selectQuery =  "SELECT " +
+                Annonce.KEY_ID_ANNONCE + "," +
+                Annonce.KEY_ID_UTILISATEUR + "," +
+                Annonce.KEY_LOCALISATION + "," +
+                Annonce.KEY_TEXT_ANNONCE + "," +
+                Annonce.KEY_DATE + "," +
+                Annonce.KEY_STATUT +
+                " FROM " + Annonce.TABLE + " WHERE " + Annonce.KEY_ID_UTILISATEUR + " <>?";
+
+        ArrayList<LinkedHashMap<String, String>> annonceList = new ArrayList<LinkedHashMap<String, String>>();
+        Cursor cursor = db.rawQuery(selectQuery, new String[]{String.valueOf(user_ID)});
+        // looping through all rows and adding to list
+
+        if (cursor.moveToFirst()) {
+            do {
+                LinkedHashMap<String, String> annonce = new LinkedHashMap<String, String>();
+                annonce.put("id_annonce", cursor.getString(cursor.getColumnIndex(Annonce.KEY_ID_ANNONCE)));
+                annonce.put("id_utilisateur", cursor.getString(cursor.getColumnIndex(Annonce.KEY_ID_UTILISATEUR)));
+                annonce.put("localisation", cursor.getString(cursor.getColumnIndex(Annonce.KEY_LOCALISATION)));
+                annonce.put("texte_annonce", cursor.getString(cursor.getColumnIndex(Annonce.KEY_TEXT_ANNONCE)));
+                annonce.put("date", cursor.getString(cursor.getColumnIndex(Annonce.KEY_DATE)));
+                annonce.put("statut", cursor.getString(cursor.getColumnIndex(Annonce.KEY_STATUT)));
+                annonceList.add(annonce);
             } while (cursor.moveToNext());
         }
 
@@ -101,12 +140,13 @@ public class AnnonceRepo {
                 Annonce.KEY_ID_UTILISATEUR + "," +
                 Annonce.KEY_LOCALISATION + "," +
                 Annonce.KEY_TEXT_ANNONCE + "," +
+                Annonce.KEY_DATE + "," +
                 Annonce.KEY_STATUT +
                 " FROM " + Annonce.TABLE + " WHERE " + Annonce.KEY_ID_UTILISATEUR + " =?";
 
         ArrayList<HashMap<String, String>> annonceList = new ArrayList<HashMap<String, String>>();
 
-        Cursor cursor = db.rawQuery(selectQuery, null);
+        Cursor cursor = db.rawQuery(selectQuery, new String[]{String.valueOf(user_ID)});
         // looping through all rows and adding to list
 
         if (cursor.moveToFirst()) {
@@ -116,6 +156,7 @@ public class AnnonceRepo {
                 annonce.put("id_utilisateur", cursor.getString(cursor.getColumnIndex(Annonce.KEY_ID_UTILISATEUR)));
                 annonce.put("localisation", cursor.getString(cursor.getColumnIndex(Annonce.KEY_LOCALISATION)));
                 annonce.put("texte_annonce", cursor.getString(cursor.getColumnIndex(Annonce.KEY_TEXT_ANNONCE)));
+                annonce.put("date", cursor.getString(cursor.getColumnIndex(Annonce.KEY_DATE)));
                 annonce.put("statut", cursor.getString(cursor.getColumnIndex(Annonce.KEY_STATUT)));
                 annonceList.add(annonce);
 

@@ -35,7 +35,7 @@ public class Profil extends AppCompatActivity implements View.OnClickListener {
         mes_annonces = findViewById(R.id.mes_annonces);
         mes_annonces.setOnClickListener(this);
 
-        gerer_annonces = findViewById(R.id.button2);
+        gerer_annonces = findViewById(R.id.Préférence);
         gerer_annonces.setOnClickListener(this);
 
         Context context = getApplicationContext();
@@ -76,7 +76,7 @@ public class Profil extends AppCompatActivity implements View.OnClickListener {
             case R.id.mes_annonces:
 
                 break;
-            case R.id.button2:
+            case R.id.Préférence:
 
                 break;
         }

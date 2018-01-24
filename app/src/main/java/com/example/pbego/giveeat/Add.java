@@ -76,7 +76,7 @@ public class Add extends AppCompatActivity implements View.OnClickListener{
         Annonce_CategorieRepo ann_cat = new Annonce_CategorieRepo(context);
 
         description = findViewById(R.id.description_complete);
-        descrip =description.getText().toString();
+        descrip = description.getText().toString();
         date = findViewById(R.id.date);
         dat = date.getText().toString();
         choix1 = findViewById(R.id.choix_mess);
