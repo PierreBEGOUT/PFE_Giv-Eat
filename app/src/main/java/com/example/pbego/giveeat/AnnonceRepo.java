@@ -97,6 +97,41 @@ public class AnnonceRepo {
         return annonceList;
     }
 
+    public HashMap<String, String> getAnnonceById(long Annonce_id) {
+        //Open connection to read only
+        SQLiteDatabase db = dbHandler.getReadableDatabase();
+        String selectQuery =  "SELECT " +
+                Annonce.KEY_ID_ANNONCE + "," +
+                Annonce.KEY_ID_UTILISATEUR + "," +
+                Annonce.KEY_LOCALISATION + "," +
+                Annonce.KEY_TEXT_ANNONCE + "," +
+                Annonce.KEY_DATE + "," +
+                Annonce.KEY_STATUT +
+                " FROM " + Annonce.TABLE + " WHERE " + Annonce.KEY_ID_ANNONCE + " =?";
+
+        HashMap<String, String> annonce = new HashMap<String, String>();
+
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        // looping through all rows and adding to list
+
+        if (cursor.moveToFirst()) {
+            do {
+                annonce.put("id_annonce", cursor.getString(cursor.getColumnIndex(Annonce.KEY_ID_ANNONCE)));
+                annonce.put("id_utilisateur", cursor.getString(cursor.getColumnIndex(Annonce.KEY_ID_UTILISATEUR)));
+                annonce.put("localisation", cursor.getString(cursor.getColumnIndex(Annonce.KEY_LOCALISATION)));
+                annonce.put("texte_annonce", cursor.getString(cursor.getColumnIndex(Annonce.KEY_TEXT_ANNONCE)));
+                annonce.put("date", cursor.getString(cursor.getColumnIndex(Annonce.KEY_DATE)));
+                annonce.put("statut", cursor.getString(cursor.getColumnIndex(Annonce.KEY_STATUT)));
+
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+        System.out.println("annonceList : " + annonce);
+        return annonce;
+    }
+
     public ArrayList<LinkedHashMap<String, String>>  getAnnonceListByUtDiff(long user_ID) {
         //Open connection to read only
         SQLiteDatabase db = dbHandler.getReadableDatabase();

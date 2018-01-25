@@ -26,7 +26,7 @@ public class Add extends AppCompatActivity implements View.OnClickListener{
     String localisation , id="", descrip, dat;
     CheckBox choix1, choix2;
     Utilisateur User;
-    //Categorie frais, conserve, epicerie;
+    Categorie Frais, Conserve, Epicerie;
     long cat_id, annonce_id;
     ToggleButton frais, conserve, epicerie;
 
@@ -51,17 +51,17 @@ public class Add extends AppCompatActivity implements View.OnClickListener{
         UtilisateurRepo repo = new UtilisateurRepo(context);
         CategorieRepo catrepo = new CategorieRepo(context);
 
-        /*frais = new Categorie("Frais");
-        conserve = new Categorie("Conserve");
-        epicerie = new Categorie("Epicerie");
+        Frais = new Categorie("Frais");
+        Conserve = new Categorie("Conserve");
+        Epicerie = new Categorie("Epicerie");
 
-        cat_id = catrepo.insertCategorie(frais);
+        cat_id = catrepo.insertCategorie(Frais);
         System.out.println(cat_id);
-        cat_id = catrepo.insertCategorie(conserve);
+        cat_id = catrepo.insertCategorie(Conserve);
         System.out.println(cat_id);
-        cat_id = catrepo.insertCategorie(epicerie);
+        cat_id = catrepo.insertCategorie(Epicerie);
         System.out.println(cat_id);
-        */
+
         User = repo.getUserById(Long.parseLong(id));
 
         frais = findViewById(R.id.frais);
@@ -96,14 +96,17 @@ public class Add extends AppCompatActivity implements View.OnClickListener{
         if(frais.isActivated()){
             Annonce_Categorie ann1 = new Annonce_Categorie(annonce_id, 1);
             long ancatid = ann_cat.insertAnnonce_Cat(ann1);
+            System.out.println(ancatid);
         }
         if(conserve.isActivated()){
             Annonce_Categorie ann1 = new Annonce_Categorie(annonce_id, 2);
             long ancatid = ann_cat.insertAnnonce_Cat(ann1);
+            System.out.println(ancatid);
         }
         if(epicerie.isActivated()){
             Annonce_Categorie ann1 = new Annonce_Categorie(annonce_id, 3);
             long ancatid = ann_cat.insertAnnonce_Cat(ann1);
+            System.out.println(ancatid);
         }
 
         System.out.println(annonce_id);

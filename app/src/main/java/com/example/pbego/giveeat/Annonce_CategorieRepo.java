@@ -77,7 +77,7 @@ public class Annonce_CategorieRepo {
 
         cursor.close();
         db.close();
-        System.out.println("CatList : " + catList);
+        System.out.println("CatList : " + catList.size());
         return catList;
     }
 }

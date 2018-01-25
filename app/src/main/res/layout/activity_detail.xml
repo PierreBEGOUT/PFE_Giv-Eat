@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/footer2"></include>
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/header"></include>
+
+    <RelativeLayout
+        android:layout_width="381dp"
+        android:layout_height="427dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.53">
+
+        <TextView
+            android:id="@+id/DataRecup"
+            android:layout_width="387dp"
+            android:layout_height="22dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/vertTransparent"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="80dp" />
+
+        <TextView
+            android:id="@+id/Rdv"
+            android:layout_width="387dp"
+            android:layout_height="22dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/texteAnnonce3"
+            android:layout_marginTop="30dp"
+            android:background="@color/vertTransparent"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="80dp" />
+
+        <TextView
+            android:id="@+id/User"
+            android:layout_width="387dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/contact"
+            android:layout_marginTop="18dp"
+            android:background="@color/vertTransparent"
+            android:fontFamily="@font/lato"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="80dp" />
+
+        <MultiAutoCompleteTextView
+            android:id="@+id/pRdv"
+            android:layout_width="300dp"
+            android:layout_height="64dp"
+            android:layout_alignLeft="@+id/texteAnnonce3"
+            android:layout_alignStart="@+id/texteAnnonce3"
+            android:layout_below="@+id/texteAnnonce3"
+            android:layout_marginTop="71dp"
+            android:background="@color/gris"
+            android:focusable="false"
+            android:fontFamily="@font/lato"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/localAnnonce"
+            tools:layout_editor_absoluteX="99dp" />
+
+        <MultiAutoCompleteTextView
+            android:id="@+id/texteAnnonce3"
+            android:layout_width="300dp"
+            android:layout_height="64dp"
+            android:layout_below="@+id/DataRecup"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="38dp"
+            android:background="@color/gris"
+            android:focusable="false"
+            android:fontFamily="@font/lato"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/localAnnonce"
+            tools:layout_editor_absoluteX="99dp" />
+
+        <TextView
+            android:id="@+id/conserve2"
+            android:layout_width="67dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/DataRecup"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13dp"
+            android:background="@color/vert"
+            android:text="Conserve"
+            android:textAlignment="center"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/texteAnnonce"
+            app:layout_constraintStart_toEndOf="@+id/Frais" />
+
+        <TextView
+            android:id="@+id/frais2"
+            android:layout_width="44dp"
+            android:layout_height="19dp"
+            android:layout_alignBaseline="@+id/conserve2"
+            android:layout_alignBottom="@+id/conserve2"
+            android:layout_alignLeft="@+id/pRdv"
+            android:layout_alignStart="@+id/pRdv"
+            android:background="@color/vert"
+            android:text="Frais"
+            android:textAlignment="center"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/texteAnnonce"
+            app:layout_constraintStart_toEndOf="@+id/photo" />
+
+        <TextView
+            android:id="@+id/epicerie2"
+            android:layout_width="55dp"
+            android:layout_height="19dp"
+            android:layout_alignBottom="@+id/conserve2"
+            android:layout_alignEnd="@+id/pRdv"
+            android:layout_alignRight="@+id/pRdv"
+            android:background="@color/vert"
+            android:text="Epicerie"
+            android:textAlignment="center"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/texteAnnonce"
+            app:layout_constraintStart_toEndOf="@+id/Conserve" />
+
+        <Button
+            android:id="@+id/contact"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/pRdv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@color/vert"
+            android:fontFamily="@font/lato"
+            android:text="Contacter"
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/pRdv"
+            android:layout_alignStart="@+id/pRdv"
+            android:layout_below="@+id/User"
+            android:layout_marginTop="15dp"
+            app:srcCompat="@drawable/ic_action_name" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView2"
+            android:layout_alignLeft="@+id/contact"
+            android:layout_alignStart="@+id/contact"
+            android:text="TextView"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView12"
+            android:layout_alignLeft="@+id/textView12"
+            android:layout_alignStart="@+id/textView12"
+            android:fontFamily="@font/lato"
+            android:text="Tags :"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

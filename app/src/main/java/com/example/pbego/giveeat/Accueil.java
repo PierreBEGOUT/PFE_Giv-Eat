@@ -1,5 +1,6 @@
 package com.example.pbego.giveeat;
 import android.content.Intent;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,22 +9,25 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
-public class Accueil extends AppCompatActivity implements OnClickListener {
+public class Accueil extends AppCompatActivity implements OnClickListener{
 
     // Session Manager Class
     SessionManagement session;
     HashMap<String, String> user, annonce;
     private ImageButton profil, add = null;
     ArrayList<LinkedHashMap<String, String>> annonces;
-    ArrayList<HashMap<String,String>> annonceList;
+    ArrayList<HashMap<String,String>> annonceList, cat;
     private ListView maListView;
     Utilisateur newUser;
     UtilisateurRepo rep ;
+    Annonce_CategorieRepo repp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +47,7 @@ public class Accueil extends AppCompatActivity implements OnClickListener {
 
         session.checkLogin();
         AnnonceRepo annrep = new AnnonceRepo(getApplicationContext());
-
+        Annonce_CategorieRepo repp=new Annonce_CategorieRepo(getApplicationContext());
 
         // get user data from session
         user = session.getUserDetails();
@@ -69,14 +73,45 @@ public class Accueil extends AppCompatActivity implements OnClickListener {
             annonce.put("img", String.valueOf(R.drawable.planet));
             newUser = rep.getUserById(Long.parseLong(a.get("id_utilisateur")));
             annonce.put("nom", newUser.prenom);
+
+            cat = repp.getCategorieListByAnnonce(Long.parseLong(a.get("id_annonce")));
+            for(HashMap<String, String> s : cat){
+                if(s.get("id_categorie")=="7"){
+                    String st = "Frais";
+                    annonce.put("Frais", st);
+                }
+                if(s.get("id_categorie")=="8"){
+                    String st = "Conserve";
+                    annonce.put("Conserve", st);
+                }
+                if(s.get("id_categorie")=="9"){
+                    String st = "Epicerie";
+                    annonce.put("Epicerie", st);
+                }
+            }
+            annonce.put("tags", "Tags : ");
             annonceList.add(annonce);
     }
         maListView = findViewById(R.id.listView);
 
         SimpleAdapter mSchedule = new SimpleAdapter(getApplicationContext(), annonceList, R.layout.annonce_liste,
-               new String[]{"texte","img", "local","nom"}, new int[]{R.id.texteAnnonce,R.id.photo, R.id.localAnnonce,  R.id.nomUt } );
+               new String[]{"texte","img", "local","nom", "Frais", "Conserve", "Epicerie", "tags"}, new int[]{R.id.texteAnnonce,R.id.photo, R.id.localAnnonce,  R.id.nomUt, R.id.Frais
+        , R.id.Conserve, R.id.Epicerie, R.id.Tags} );
 
         maListView.setAdapter(mSchedule);
+
+        maListView.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
+            public void onItemClick(AdapterView<?> adapter, View v, int position,
+                                    long arg3)
+            {
+                System.out.println("OUIIIIIIIIIIIIIIII");
+                HashMap<String, String> map = (HashMap<String, String>) maListView.getItemAtPosition(position);
+                Intent detail = new Intent(Accueil.this, Annonce_Detail.class);
+                detail.putExtra("id_annonce", map.get("id_annonce"));
+                startActivity(detail);
+            }
+        });
     }
 
 
@@ -94,6 +129,7 @@ public class Accueil extends AppCompatActivity implements OnClickListener {
                 break;
         }
     }
+
 }
 
 
