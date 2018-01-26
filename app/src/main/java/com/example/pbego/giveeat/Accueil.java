@@ -95,7 +95,7 @@ public class Accueil extends AppCompatActivity implements OnClickListener{
         maListView = findViewById(R.id.listView);
 
         SimpleAdapter mSchedule = new SimpleAdapter(getApplicationContext(), annonceList, R.layout.annonce_liste,
-               new String[]{"texte","img", "local","nom", "Frais", "Conserve", "Epicerie", "tags"}, new int[]{R.id.texteAnnonce,R.id.photo, R.id.localAnnonce,  R.id.nomUt, R.id.Frais
+               new String[]{"id_ann","texte","img", "local","nom", "Frais", "Conserve", "Epicerie", "tags"}, new int[]{R.id.numAnn,R.id.texteAnnonce,R.id.photo, R.id.localAnnonce,  R.id.nomUt, R.id.Frais
         , R.id.Conserve, R.id.Epicerie, R.id.Tags} );
 
         maListView.setAdapter(mSchedule);
@@ -105,10 +105,11 @@ public class Accueil extends AppCompatActivity implements OnClickListener{
             public void onItemClick(AdapterView<?> adapter, View v, int position,
                                     long arg3)
             {
-                System.out.println("OUIIIIIIIIIIIIIIII");
-                HashMap<String, String> map = (HashMap<String, String>) maListView.getItemAtPosition(position);
+                TextView id =  v.findViewById(R.id.numAnn);
+                long id_ann=Long.parseLong(id.getText().toString());
                 Intent detail = new Intent(Accueil.this, Annonce_Detail.class);
-                detail.putExtra("id_annonce", map.get("id_annonce"));
+                detail.putExtra("id_annonce", id_ann);
+                System.out.println(id_ann);
                 startActivity(detail);
             }
         });

@@ -36,6 +36,7 @@
             android:text="TextView"
             android:textAlignment="center"
             android:textColor="@android:color/black"
+            android:textStyle="bold"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="80dp" />
 
@@ -48,9 +49,10 @@
             android:layout_below="@+id/texteAnnonce3"
             android:layout_marginTop="30dp"
             android:background="@color/vertTransparent"
-            android:text="TextView"
+            android:text="Lieux de rendez-vous"
             android:textAlignment="center"
             android:textColor="@android:color/black"
+            android:textStyle="bold"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="80dp" />
 
@@ -64,9 +66,10 @@
             android:layout_marginTop="18dp"
             android:background="@color/vertTransparent"
             android:fontFamily="@font/lato"
-            android:text="TextView"
+            android:text="Propriétaire de l'annonce"
             android:textAlignment="center"
             android:textColor="@android:color/black"
+            android:textStyle="bold"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="80dp" />
 
@@ -169,7 +172,7 @@
             app:srcCompat="@drawable/ic_action_name" />
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/nomPrenom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/imageView2"
@@ -183,9 +186,9 @@
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/textView12"
-            android:layout_alignLeft="@+id/textView12"
-            android:layout_alignStart="@+id/textView12"
+            android:layout_above="@+id/nomPrenom"
+            android:layout_alignLeft="@+id/nomPrenom"
+            android:layout_alignStart="@+id/nomPrenom"
             android:fontFamily="@font/lato"
             android:text="Tags :"
             android:textColor="@android:color/black"

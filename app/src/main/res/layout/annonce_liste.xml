@@ -140,6 +140,16 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/texteAnnonce"
             app:layout_constraintStart_toEndOf="@+id/Conserve" />
+
+        <TextView
+            android:id="@+id/numAnn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/Tags"
+            android:text="TextView"
+            android:textColor="@android:color/black" />
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

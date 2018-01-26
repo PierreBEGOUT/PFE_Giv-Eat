@@ -111,7 +111,7 @@ public class AnnonceRepo {
 
         HashMap<String, String> annonce = new HashMap<String, String>();
 
-        Cursor cursor = db.rawQuery(selectQuery, null);
+        Cursor cursor = db.rawQuery(selectQuery, new String[]{String.valueOf(Annonce_id)});
         // looping through all rows and adding to list
 
         if (cursor.moveToFirst()) {
@@ -128,7 +128,7 @@ public class AnnonceRepo {
 
         cursor.close();
         db.close();
-        System.out.println("annonceList : " + annonce);
+        System.out.println("annonce : " + annonce);
         return annonce;
     }
 
