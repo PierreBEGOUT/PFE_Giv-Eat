@@ -74,7 +74,8 @@ public class Profil extends AppCompatActivity implements View.OnClickListener {
         {
             //si on appuit sur le profil
             case R.id.mes_annonces:
-
+                Intent prof = new Intent(Profil.this, Mes_Annonces.class);
+                startActivity(prof);
                 break;
             case R.id.Préférence:
 
